@@ -1,53 +1,35 @@
-**Setup Instructions**
+Inconsistency Detector 🔍  
+**Tech Stack:** Python • python-pptx • Pillow • Tesseract OCR (pytesseract) • Google GenAI SDK (Gemini 2.5 Flash LLM)
 
-**1.Clone the repository:**
+📌 Overview
+The **Inconsistency Detector** is an AI-powered tool that analyzes PowerPoint (`.pptx`) decks for **cross-slide inconsistencies** in metrics, timelines, and terminology.  
+It extracts both **native text** and **embedded image text (via OCR)**, then leverages **Gemini 2.5 Flash LLM** to generate a structured, slide-wise inconsistency report.
 
-git clone https://github.com/your-username/inconsistency-detector.git
-cd inconsistency-detector
-Create and activate a virtual environment:
+---
 
-**2. Windows (PowerShell):**
+🚀 Features
+- Extracts text from PPTX slides using **python-pptx**.  
+- Saves and processes embedded images with **Pillow**.  
+- Runs **Tesseract OCR** to capture text from images (charts, screenshots, tables).  
+- Integrates with **Gemini 2.5 Flash LLM** to identify inconsistencies across slides.  
+- Outputs a **clean, slide-referenced report** highlighting contradictions.  
+- Robust handling for missing images or OCR errors.  
 
-python -m venv venv
-.\venv\Scripts\Activate.ps1
+---
 
-**3. Install dependencies:**
+📂 Project Structure
+inconsistency-detector/
+│── data/
+│ ├── sample_deck.pptx # Example input file
+│ └── images/ # Extracted images from slides
+│── src/
+│ ├── main.py # Entry point / orchestrator
+│ ├── extract.py # PPTX text & image extraction
+│ ├── ocr.py # OCR wrapper for images
+│ ├── analyze.py # Builds prompt & analyzes with LLM
+│ └── llm_client.py # Google GenAI client wrapper
+│── requirements.txt
+│── README.md
 
-pip install -r requirements.txt
-
-**4. Add your PowerPoint file:**
-
-Place your .pptx file inside the data/ folder.
-
-
-**How to Use**
-
-Run the main script to analyze the presentation:
-
-python src/main.py
-The inconsistencies will be printed in the terminal.
-
-
-**Project Structure:**
-
-data/
-outputs/           
-src/               
-.gitignore
-requirements.txt
-README.md
-Features
-Extracts both typed text and images from slides.
-
-Applies OCR on slide images to capture embedded text.
-
-Uses AI to detect inconsistencies in data and statements across slides.
-
-Provides clear, structured output referencing slide numbers and issue types.
-
-Limitations:
-Designed for English-language presentations.
-
-Accuracy depends on quality of slides and OCR.
-
-Currently command-line only, no GUI.
+yaml
+Copy code
