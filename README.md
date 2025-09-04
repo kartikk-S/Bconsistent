@@ -30,6 +30,3 @@ inconsistency-detector/
 │ └── llm_client.py # Google GenAI client wrapper
 │── requirements.txt
 │── README.md
-
-yaml
-Copy code
