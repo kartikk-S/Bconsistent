@@ -19,7 +19,7 @@ client = genai.Client(api_key=api_key)
 
 def get_gemini_response(prompt: str) -> str:
     resp = client.models.generate_content(
-        model="gemini-1.5-flash",   # or "gemini-1.5-pro"
+        model="gemini-2.5-flash",   # or "gemini-1.5-pro"
         contents=prompt
     )
     return resp.text
