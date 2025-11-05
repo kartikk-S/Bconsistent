@@ -28,5 +28,5 @@ inconsistency-detector/
 │ ├── ocr.py # OCR wrapper for images
 │ ├── analyze.py # Builds prompt & analyzes with LLM
 │ └── llm_client.py # Google GenAI client wrapper
-│── requirements.txt
+│── requirements.txt (Important)
 │── README.md
