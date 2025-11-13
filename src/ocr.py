@@ -1,9 +1,6 @@
 import pytesseract
 from PIL import Image
 
-# Uncomment and set this if Tesseract is not in your PATH:
-# pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-
 def ocr_images(image_paths):
     results = []
     for image_path in image_paths:
