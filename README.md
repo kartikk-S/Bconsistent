@@ -9,7 +9,7 @@ It extracts both **native text** and **embedded image text (via OCR)**, then lev
 
 🚀 Features
 - Extracts text from PPTX slides using **python-pptx**.  
-- Saves and processes embedded images with **Pillow**.  
+- Saves and processes embedded images with **Pillow**. 
 - Runs **Tesseract OCR** to capture text from images (charts, screenshots, tables).  
 - Integrates with **Gemini 2.5 Flash LLM** to identify inconsistencies across slides.  
 - Outputs a **clean, slide-referenced report** highlighting contradictions.  
